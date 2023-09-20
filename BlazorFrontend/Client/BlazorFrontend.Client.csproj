@@ -23,4 +23,15 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Cards\ServiceCard.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CardsComponent.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\ChatComponent.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\DialogsComponent.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Modals\ConfirmDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Modals\ConfirmRegisterModal.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Modals\RegisterModal.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Modals\ServiceWindow.razor" />
+    </ItemGroup>
+
 </Project>
