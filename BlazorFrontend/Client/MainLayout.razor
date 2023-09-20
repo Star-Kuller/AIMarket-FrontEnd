@@ -1,0 +1,165 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+
+<header>
+  <div class="left-buttons">
+    <div class="logo">
+      <svg width="62" height="80" viewBox="0 0 62 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="33.091" height="9.97258" transform="matrix(0.804432 -0.594045 0.583184 0.81234 4.18768 19.7781)" fill="#69BE7D"/>
+        <path d="M30.698 0L58.0796 20.457L52.2194 28.5255L32.8266 14.037C28.4145 10.7407 27.4615 4.45614 30.698 0Z" fill="#5572AB"/>
+        <path d="M3.98572 19.9131C9.46438 19.9131 13.9057 24.3544 13.9057 29.8331V59.4386H3.98572V19.9131Z" fill="#98CFC4"/>
+        <path d="M48.36 29.8331C48.36 24.3544 52.8013 19.9131 58.28 19.9131V59.4386H48.36V29.8331Z" fill="#D7A2A5"/>
+        <path d="M30.9698 79.3521L3.54283 58.9449C6.77072 54.4824 12.9694 53.53 17.3881 56.8177L36.8145 71.272L30.9698 79.3521Z" fill="#EABC90"/>
+        <path d="M58.3401 59.8877L30.7022 79.9999C27.5211 75.5034 28.5527 69.231 33.0063 65.9901L44.5164 57.6142C48.97 54.3733 55.1591 55.3912 58.3401 59.8877Z" fill="#F7A773"/>
+      </svg>
+      <span>SmartMarket</span>
+    </div>
+    <div class="geo">
+      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 9.10002V17.1M7.39999 13.3908C3.8818 13.9842 1.39999 15.4213 1.39999 17.1C1.39999 19.3092 5.69806 21.1 11 21.1C16.3019 21.1 20.6 19.3092 20.6 17.1C20.6 15.4213 18.1182 13.9842 14.6 13.3908M14.2 5.10002C14.2 6.86734 12.7673 8.30002 11 8.30002C9.23268 8.30002 7.79999 6.86734 7.79999 5.10002C7.79999 3.33271 9.23268 1.90002 11 1.90002C12.7673 1.90002 14.2 3.33271 14.2 5.10002Z" stroke="#181817" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>г.Москва</span>
+    </div>
+    <div class="text">
+      <span>О платформе</span>
+    </div>
+    <div class="text">
+      <span>Контакты</span>
+    </div>
+  </div>
+  <div class="right-buttons">
+    <div class="login">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.39621 32.5C7.60523 28.8154 12.4467 26.2937 20 26.2937C27.5533 26.2937 32.3948 28.8154 34.6038 32.5M26 13.5C26 16.8137 23.3137 19.5 20 19.5C16.6863 19.5 14 16.8137 14 13.5C14 10.1863 16.6863 7.5 20 7.5C23.3137 7.5 26 10.1863 26 13.5Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Войти</span>
+    </div>
+    <div class="basket">
+      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.06843 13.8999V12.6499C6.06843 9.66622 7.25369 6.80473 9.36348 4.69495C11.4733 2.58517 14.3347 1.3999 17.3184 1.3999C20.3021 1.3999 23.1636 2.58517 25.2734 4.69495C27.3832 6.80473 28.5684 9.66622 28.5684 12.6499V13.8999M33.2184 16.6999C33.2611 16.351 33.2298 15.9969 33.1264 15.6609C33.023 15.3249 32.8499 15.0145 32.6184 14.7499C32.3842 14.4832 32.0958 14.2695 31.7725 14.1229C31.4492 13.9764 31.0984 13.9004 30.7434 13.8999H3.89343C3.53846 13.9004 3.18767 13.9764 2.86437 14.1229C2.54108 14.2695 2.2527 14.4832 2.01843 14.7499C1.78693 15.0145 1.61384 15.3249 1.51046 15.6609C1.40707 15.9969 1.37571 16.351 1.41843 16.6999L3.29343 31.6999C3.36712 32.3097 3.6627 32.871 4.1238 33.2767C4.5849 33.6825 5.17923 33.9043 5.79343 33.8999H28.8934C29.5076 33.9043 30.102 33.6825 30.5631 33.2767C31.0242 32.871 31.3197 32.3097 31.3934 31.6999L33.2184 16.6999Z" stroke="#181817" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="chats">
+    <div class="chats-list">
+      <span class="chats-list-name">Диалоги</span>
+      <div class="list-scroll">
+        <div class="scroll-line"></div>
+        <div class="chat-name-icon">
+          <div class="chat-icon">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEV0qpz///+Ds6ZppJVvp5lopJV/sKRxqZp5raDX5eHA19GRu6/x9/Vtppfk7uv0+Pety8PV5OCjxbyZv7W71M3K3difw7ne6ufq8vCyzsfy9/aLt6u/1tCUvLLH29avzcX7cXLbAAARjklEQVR4nN1d6briKBCNASTqJWrc9/d/y0miV1mqoCDYV+d8Mz9mOh05AWqnKEYxqCfTW3M5leX4L1CWp1lzmC73UWMuqA/uN03JmeKcy6Io5F+g/d2Cc6UYHzebn7wMd4tKqP4XPgRciaqZ5GJYLwrG/5oSAM5ks8vA8DoWn0ivh5Si3AxkOC3UX9MIgBXTAQyvH8+vg/Jz9DCcVOyvB0+EqjxCB2U4v4i/HngExGoey3DDPkk5hCHZNY7h9lsW6AtsG8FwX32DhLGhKtCcgxhuvm8C72BLGsPDN4kYE+JAYdh86wx2YIsww68m2FJsQgy/nCBA0WJ4+3aC7kI1Ga6/V8i8wNY4w83/gWArUZcYw/33L9E72B5h+NcDy4cKZrj6WF8+GmoLMfxaWw0C2wAMPyqWNhhs7jD8H63RDvJiM5y8V1HI4l+vEDaxGFbv+R3ZhagZ6+LVXAmm1L9bKZXJ8PoGMdOyY8XlsNnt73tiPq+Xh23F/lF8hE0Nhvl/QDK5ApML82VTMP4vWOoMz7mjFlxtfVmF3YK/P06iphrD3O8u1mhw7xfXfxCNfTHMquylqrDAnoll+WaOd7XfMywz7gouA3kEDZv3Zg3k6ZdhnVEXYlFLBO8NKYj9g+Eim5LinJa1fGFXvFFD8sWDYbY3slNQwLhYvXMa7wx3uX4CilYScH6fwch2PcNMi1SyYDoWwfJts9gt0yKbScrgnHo9bU7dL1TjU7NewhUU2VaRg6pj+JNnkagaGPrmopjqLDTZ/6uUKMAKilr1dSTsAZXNVxXHluEmi04S7gzuFxyo4Wjt1YM7k7WqLrfpsq73+7rebdZNKRnPsHvUpmXY5PhewtmD+xVaw6HEllDWVE9Xw90Q3rQMxwNf0sEKwrYOROOtUZFiS9Iru0YOXGFlyzDDWuAXa2Sb4MA4J0rezXhQuRIfFTnCwJU1qq0grC5Bte92M8rrELB9MRnO0JIy8zFpZXFBc0E6jmXyhmST4jp4lSoz2bMnyUAumhgL75oaFODX4jB8H5oESRPITnFFoqP5JW2t8UMxWFmY5QFHyutUBZUUBDBNoiibYmgkmJ+McVTh13Fu6xYa6hRHi6+KWQIrHaY5egmuUaoqBDAvE5TjrDil0NIGbExheCWxE2S/9thv1ovmctk2h+sO+QizeIqnokwi9hqxvqOOIYKqQPT8fj2TXRG5bP+RXZi8XIDRglU0xXIoQ0PZz/wbRSrYRZ6vK+GE+zkTDTDd4W1gYShDpQsNf3ZHIhWS8wZLZnB2cifyFCn7BzLkQneEvK9iJewhL3wmOhelM4+RDvsQhq1zOzOm0LMLObIBryETXTp1XJGGdDJDKcY3a1LwXcjZDeS3o0S91dgyf+JqYtIYSq5cKYBHQ9gFDM8ciXFEJ8S1jdH8SQy5hBIva2S9sTG8AQ90f0FYRtCbGSpE5sMvUhz2keJSFlYkNib8GM8Q83p+oF/lwq337FCfIs1oaxYDildHLENeYUYXFLITF9BHmjfxTrsZ6trThU0kQ2RKOriRc+ycxzopTCiMT9uQXxHHUHjcOtvWkArOIy5TzwEY9iG4J0DEMOSFzy+3PqqCTbT9LDkspIzI1Za6ziMYyrHXrzN3hnLKrXt4TDQerLUxAl419UvRGfLSx8/R99AzV7wAQ/LVer0NcBzrL6OOm8xQQgS1zW9ai5DK3I1RFf/r9wci5YZtMyVuZypDOXaHPC00//5ozKFyRNLRcxSOvRyIvV9Rai+cE5cplaE62kM+SyVnr/80Vymz9YTHROPSUHVLj7FjBBSIjiKRobBHvOtkPqcy3Eh08UnmLGhcXxpxvTNNJdIYOqNY9HyIDGuPjyRWzuJoFyCa99AdbqI0JTHUmXQ4PhITJIb4cHG3A7VbuW5FkAjSGApTEda/Qp3CcI9LR8zt6LEBw7/Gt6aZ3xSGzDS/XsEKCkN0LWFuxxM3SDgp/YFsDE1NuHstuiEMGex26PgBkjFMU8G0AgQCQzM7qGv2dIbe4+Xa1xzbf1tpC5tWoxJmaIqZOfZHMQwV4HbMabE4ri1tWtAtzJAZftlM3xtpDMHc6JQLUjyVr7SPkmeVmpmXtTHeJIZQbnRSdVJFXADdaDlcxnDyMDQMpblpWyYwVIXrRD8likTCqhPNadbt4zwMDc/6YsrvaIZcAbnRm7YMeQGryJchp4+HZJiGGBpukF1LHMkQzI3aUUUkvfG0jHSGWfShcVbxZL0yjiGUG4XC+mIFRsgfhlz2Vaq/0CkHj2EI5UaRsD7gbvTopju7pDEWqRP8oTOUUPnwDTXJsUzVQShdW+TQh7oydNUPmSG88HxxN+bmDTscL7k1vm7oumYgkSHqI3VqIBS6saH9T1q9mp+hseovjugiMRSIArjjjMe/uZ1xsjHNIEt1KxCQzSSGcOD0CV94LVA6Ravm8jPULXnAhCbHabzwhdc81TfUiKmfoV7vdHVlcwrDGjC7PakMzvASxhxxGqaJQOBURjzD1jRRkOW2xuuAOZLhIQqa0CrVvp8raOIZrvsID7S95ls8oIq4y8SDMAGG2guB5yIZvhajmLkelDfmCIU8SPyCslR7IVCoE8XQ0O+gFwyH1x7Pu2Er20pOYmi0BXFXUQxDO6+moIOYBzy0qtza/iqDtjCcsSEMgbyaZJVr6vysPOHj0goBHIdb3lKfwwGrFCt9gsxVz3bkyprGJaVegS5pgKM1NIbtvGDvB10OTxrHfrwhzCKdIZDMIjH0lz6BftIN1Y52Iy/CTgxofE3gAaUBRMvbD+YyHP2g6VTdPxyRiqMCDDU1BJStDcpbPAEwhKLdD1glEOHsTIChZnwAn+uNDLs8PbzJTJ8qXBwV2Ifa24Aq9bcybP0qeDua+ehgXU3AptFXvasudIbH7AxRv0rq5lAwlBGwaXSV71q6RtLG0AlJDIFDFqBfJY3TjoBHEMNQaGaEm8wy01K6cEhieBZndx7XgLIx1mnIiQpFonRt5S5Tq4rolQpLYtjKFsivAoKqRqohULsfYCj1arm1sx6Eva4WD+GQxrD9u2zmGnJr5xVGcdTBb9iEYt66/zR3JDN3wkz7mRjEEPST3ON1+iQGZE0wb6Evm4XztYAm2n0qLJ1h51fZL3XfYQzLv0yDc6jrCyDpCsVtp4oPYQjkn1wZp4tTfzgjmD80thpkuTlH8fsY6CCGXdjC2I7uLOnD8hunQYZmZAxaEJAArJ9hzjSGVjrY/VldyLvyIYqh1GUNMl4osDSQYftSL0O+9f5xDMNCGWrYldz97wFttN/L0DD2vGZNmKE5idiZI6hE5q0M9WC1VyMSaqKUWSCBBfGQHNrbGGqWG5BweIFUuWfushINMUBH1OrA8Rj5YhLFUK/D9JqmFIbWifsRemYcPGY49XZI1CP2cQy1n/KuE1J9qVV+6ek/BtUjeDKE3HhzFEPdYvbabbQqaGFpA1ii9oC2I5KwtzNncXOoWTXeQ/LESna7AU3taVwJHdmGPFkn+xnHUPNNvUUZRIZOE6HO+MQeBuO8a+t5wBL6U4bAzRjeBHxoO0LWbCRDzSXwHmQjn5lZOQPyHgSFEvDP5yV8DjVO0miuaQZJY4UznvCcbwET8PcyPaz8IIqhXq01XFsUQLziAShQ9MsRTtgzrPlHJEPtLcuhNk3/HDIqMFD0HAXgVx2BeFoKQ/3QrPd8EJGh9NT9+Boj+PyqYQz1tJj3UDCRofI2HvNcIhg8N3J8Sf0YhkY9mvcUG5Eh0rnzCc/pVzBh/8RBpVneRqspr21PZajFvkGZg2f8POe3uuoL+VpuMQx1O9LvoFFXqfZzM3hPohm/Aus8cNePaQx1yec/iJhgl44xfx4/yIzYOP3qSmJoyAV/lpTIUP9kHF93CzDjByvGXzs1jaH+qYZF9R9j1JNM/YZDz7c42xEs9tV8jRSGRmAlcISNyFB3Le4csPMttp8EmWiGv5jAUHL9mwVS+ckM8YL6s+Yngf3ZTNWSwJDr3lmo0XPqKu2BFNQ/E/Bgf7arVYGQMof6+wLJtRRJo+lXrKC+1wMSKupyGyvEMzRLFYJDT9AW+h+Aruyo245ApzXQLohmaDaEDd6ukqLxg+GIO0f3fwXOLtMYWg06gnVfVKtNW4xOus5bUP8CUpEXyVAWxr4Id9ClMvQeofYV1P8CraqMnUNjb8/DdcLUVaoJfSgqwhXu2HY44o0VXpV7BIacm8JrFS5OpEYTdfUODxR1IEb+WMdL9IcZKqvNEaWElurj6w4nchqHQU08+nH4HGTt0wUZMjvgRxk6OdamvRdL9UgBGXLemKNh3QYYuh3OZ5RSdnJEWF+D6FPuQWWswLB/p1XK7mfonnI/ZOo48Bi7rmaxHpCFsx3PvuiG/TU8DCUrHf1KqmOP6fWlT4zv42k9dSaeE1tAhMr8cDpDdQLKPTL3iTKXqVscpeE3MQP4iq/hQ1HGLTqHwMN7altBejczvbxjDhwv0cCL5rye4RsQPqpl+upSAo8kEIxYpbrhNjr7l0jXktvTWggO81j2rrcBXk3vvRjRc89wIpLvosMsvB+r3ToHkl1PxNz1F9MZ0lgliVcoCeTWh4O9ppFGtz0WMT8ewdCMISZdUo55WoDbAafzOvzE3R8Q0/tSGT+0iG7TiR0/B90OhqV0POl1EDGr1LptJbKJP5L4xfq52bURD+yj772M6kFrNlSKa+KPuclruKuCW1/d4Yd0CZGJKIZ2A8wt+Xtitz6gbgd0kPgnocFybB9hW8AdaOJGIuEqj9vh6vvlJe1mq8he0HYecUJo6yzFFmyp4y1XMT/lfLlVqTd3RXcst4cZ7I2PhI2dEiIDeiOA0a0ccltgLEN5skd670SGDhXbgN6e14acIXpJGKLnULm3pS1PCEfOkLuPA710TRt44HVN8X31oZLu3Uo420QqMUOar3j8/h7GLqT2C8aQcDcCnFZbLkrF1P22H6WYqJolEkOdBmWGoe1DmZcQyoT7nuwD1U/U3YVNTbM4TCdohHjiSfc/YDbbHHrPfJlyZ5cT1SPD5/c/324oT2rbbhRl0r1rqky7WAzO81vvNj9fAicTZdrdeZwnXH7naTqvvdlUR7fBF92WqfcfikCHKwe+epsXLNOXfskDirKg9QRzEXeH4RFvjmG81IrORNy2gqEccA8pMW/YwdN4xnijJcKuw6ewZTjgLlkuVkSOc9LNOXYMIMc1ty3DQfcBc9RuseHp5vWAci7pyXIlestw2OV5re25CJRm3vHjv9WXu4mr+LsOIbQM6dfuYINjcnt1A0eOytxhFnrfGctJPt5yrNGeYY671aVixWkxXe7qel/vltd1cyqUS3rXQI6sZHzh+sjTPJfadwxDZVNESPm84F61HmuX2YBywsutFL8hf9laDqqz0YHnchHsGObZ0CDA6MVovzlcqqoqeFHNbhs4LnrORbBnSGzPlwDpVSYe2/aWjWDPMMPd4xgE8Yp4C+nXXrnoGA6333GEDiNA2BPuhaajZzhYX3jg3LEZRDYZc0fPMNhxbAgkVOXtmcDYmxFD6BkONGtCiPBCApd2peDOMCanmgLo5mKI34HiI0fizvCdsqaHZGVQqu4blp/fk2Gw0nYwJCtuHu0435xSExMBPBgOcqGo4GK8AMOM9XTGIjO7dPwyHBy0o4EzVm3Xy93P/TLAeT25Lk6cJV1MSsQvwzcapzZkFxLvkkmcidZKHxrxDeHJMOYS4Sx4M7EnngztO2T+N3gx9Hdb+l68GGYJ3X0gNIZDU5EfCp3h2y2bP4HBkHyL8DfBYPh2C/wvYDJMKMf7eFgMSV3Ovws2w7hyvG+AwzBTtuBz4DKMqDj8CgAM48qoPx4Qw9H1/0QRZDja/TPf5v2AGeaNq/8tMIajafbA5R8BZTg65g4+/xFwht7TrV8EH8OuUvn7OfoZjuaLr+cYYNhyPHvruD8fQYYtdulHAT4AFIZdVqEj+Z0saQw71OdLJZhS+I1anwk6ww7H3Wa9WJ3Kf5cCGI7yP5WM0CefOInHAAAAAElFTkSuQmCC"/>
+          </div>
+          <span class="chat-name">AI-помошник</span>
+        </div>
+        @for (var i = 0; i < 256; i++)
+        {
+          <div class="chat-name-icon">
+            <div class="chat-icon">
+              <img src="https://randomuser.me/api/portraits/men/36.jpg"/>
+            </div>
+            <span class="chat-name">Сергей В.</span>
+          </div>
+        }
+        <div class="chat-name-icon">
+          <div class="chat-icon">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="28" r="27.5" fill="#FEFEFE" stroke="#C0C0C0"/>
+              <path d="M27.432 34.04V28.856H22.344V27.368H27.432V22.328H28.968V27.368H34.056V28.856H28.968V34.04H27.432Z" fill="#599C8F"/></svg>
+          </div>
+          <span class="chat-name">Добавить чат</span>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="chat">
+      <div class="messages">
+        <div class="message-scroller">
+          <div class="scroll-line"></div>
+          @foreach (var message in _messages.AsEnumerable().Reverse())
+          {
+            <div class="@(message.IsMyMessage ? "my-message" : "other-message")">
+              <div class="message-icon">
+                <img src="@message.Image"/>
+              </div>
+              <div class="message-text">
+                @((MarkupString)message.Text)
+              </div>
+            </div>
+          }
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+      <div class="input-container">
+        <textarea @ref="_textarea" @bind="TextAreaValue" id="inputField" class="input-field" @oninput="AutoResize" rows="1"></textarea>
+        <button class="send-button" @onclick="Send">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0704 1.92961L9.40647 12.5936M2.27112 7.23529L18.877 1.47406C19.8996 1.11927 20.8808 2.1004 20.526 3.12303L14.7648 19.7289C14.3701 20.8665 12.7726 20.8977 12.3338 19.7764L9.69691 13.0377C9.56521 12.7011 9.29894 12.4348 8.96238 12.3031L2.22366 9.66625C1.10232 9.22746 1.13351 7.62997 2.27112 7.23529Z" stroke="#599C8F" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <svg class="background" width="372" height="690" viewBox="0 0 372 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="366.5" cy="620.5" rx="234.5" ry="231.5" fill="#EAF1EC"/>
+    <path d="M60.5 228L121 288.5L60.5 349L0 288.5L60.5 228Z" fill="#EAF1EC"/>
+    <path d="M320.293 133.163C320.53 135.833 315.568 137.295 312.996 133.163C310.216 129.513 312.26 121.037 320.293 118.59C327.859 115.693 339.831 121.254 342.184 133.163C345.182 144.614 336.129 160.062 320.293 162.311C304.949 165.406 285.935 152.872 283.808 133.163C280.584 113.935 296.679 91.469 320.293 89.442C343.449 86.125 369.445 105.672 371.372 133.163C374.801 160.173 351.719 189.654 320.293 191.458C289.331 194.997 256.33 168.432 254.62 133.163C250.979 98.353 281.061 61.8955 320.293 60.2948C359.03 56.5565 399.078 90.094 400.56 133.163C404.424 175.751 367.314 219.227 320.293 220.605C273.745 224.566 226.711 184.014 225.432 133.163C221.369 82.794 265.462 32.3086 320.293 31.1474C374.634 26.965 428.692 74.5353 429.748 133.163C434.038 191.333 382.913 248.795 320.293 249.753C258.164 254.139 197.078 199.591 196.244 133.163C191.75 67.2161 249.871 2.7356 320.293 2" stroke="#EAF1EC" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+</main>
+
+@code
+{
+  ElementReference _textarea { get; set; }
+  string TextAreaValue { get; set; }
+  static string _aiImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEV0qpz///+Ds6ZppJVvp5lopJV/sKRxqZp5raDX5eHA19GRu6/x9/Vtppfk7uv0+Pety8PV5OCjxbyZv7W71M3K3difw7ne6ufq8vCyzsfy9/aLt6u/1tCUvLLH29avzcX7cXLbAAARjklEQVR4nN1d6briKBCNASTqJWrc9/d/y0miV1mqoCDYV+d8Mz9mOh05AWqnKEYxqCfTW3M5leX4L1CWp1lzmC73UWMuqA/uN03JmeKcy6Io5F+g/d2Cc6UYHzebn7wMd4tKqP4XPgRciaqZ5GJYLwrG/5oSAM5ks8vA8DoWn0ivh5Si3AxkOC3UX9MIgBXTAQyvH8+vg/Jz9DCcVOyvB0+EqjxCB2U4v4i/HngExGoey3DDPkk5hCHZNY7h9lsW6AtsG8FwX32DhLGhKtCcgxhuvm8C72BLGsPDN4kYE+JAYdh86wx2YIsww68m2FJsQgy/nCBA0WJ4+3aC7kI1Ga6/V8i8wNY4w83/gWArUZcYw/33L9E72B5h+NcDy4cKZrj6WF8+GmoLMfxaWw0C2wAMPyqWNhhs7jD8H63RDvJiM5y8V1HI4l+vEDaxGFbv+R3ZhagZ6+LVXAmm1L9bKZXJ8PoGMdOyY8XlsNnt73tiPq+Xh23F/lF8hE0Nhvl/QDK5ApML82VTMP4vWOoMz7mjFlxtfVmF3YK/P06iphrD3O8u1mhw7xfXfxCNfTHMquylqrDAnoll+WaOd7XfMywz7gouA3kEDZv3Zg3k6ZdhnVEXYlFLBO8NKYj9g+Eim5LinJa1fGFXvFFD8sWDYbY3slNQwLhYvXMa7wx3uX4CilYScH6fwch2PcNMi1SyYDoWwfJts9gt0yKbScrgnHo9bU7dL1TjU7NewhUU2VaRg6pj+JNnkagaGPrmopjqLDTZ/6uUKMAKilr1dSTsAZXNVxXHluEmi04S7gzuFxyo4Wjt1YM7k7WqLrfpsq73+7rebdZNKRnPsHvUpmXY5PhewtmD+xVaw6HEllDWVE9Xw90Q3rQMxwNf0sEKwrYOROOtUZFiS9Iru0YOXGFlyzDDWuAXa2Sb4MA4J0rezXhQuRIfFTnCwJU1qq0grC5Bte92M8rrELB9MRnO0JIy8zFpZXFBc0E6jmXyhmST4jp4lSoz2bMnyUAumhgL75oaFODX4jB8H5oESRPITnFFoqP5JW2t8UMxWFmY5QFHyutUBZUUBDBNoiibYmgkmJ+McVTh13Fu6xYa6hRHi6+KWQIrHaY5egmuUaoqBDAvE5TjrDil0NIGbExheCWxE2S/9thv1ovmctk2h+sO+QizeIqnokwi9hqxvqOOIYKqQPT8fj2TXRG5bP+RXZi8XIDRglU0xXIoQ0PZz/wbRSrYRZ6vK+GE+zkTDTDd4W1gYShDpQsNf3ZHIhWS8wZLZnB2cifyFCn7BzLkQneEvK9iJewhL3wmOhelM4+RDvsQhq1zOzOm0LMLObIBryETXTp1XJGGdDJDKcY3a1LwXcjZDeS3o0S91dgyf+JqYtIYSq5cKYBHQ9gFDM8ciXFEJ8S1jdH8SQy5hBIva2S9sTG8AQ90f0FYRtCbGSpE5sMvUhz2keJSFlYkNib8GM8Q83p+oF/lwq337FCfIs1oaxYDildHLENeYUYXFLITF9BHmjfxTrsZ6trThU0kQ2RKOriRc+ycxzopTCiMT9uQXxHHUHjcOtvWkArOIy5TzwEY9iG4J0DEMOSFzy+3PqqCTbT9LDkspIzI1Za6ziMYyrHXrzN3hnLKrXt4TDQerLUxAl419UvRGfLSx8/R99AzV7wAQ/LVer0NcBzrL6OOm8xQQgS1zW9ai5DK3I1RFf/r9wci5YZtMyVuZypDOXaHPC00//5ozKFyRNLRcxSOvRyIvV9Rai+cE5cplaE62kM+SyVnr/80Vymz9YTHROPSUHVLj7FjBBSIjiKRobBHvOtkPqcy3Eh08UnmLGhcXxpxvTNNJdIYOqNY9HyIDGuPjyRWzuJoFyCa99AdbqI0JTHUmXQ4PhITJIb4cHG3A7VbuW5FkAjSGApTEda/Qp3CcI9LR8zt6LEBw7/Gt6aZ3xSGzDS/XsEKCkN0LWFuxxM3SDgp/YFsDE1NuHstuiEMGex26PgBkjFMU8G0AgQCQzM7qGv2dIbe4+Xa1xzbf1tpC5tWoxJmaIqZOfZHMQwV4HbMabE4ri1tWtAtzJAZftlM3xtpDMHc6JQLUjyVr7SPkmeVmpmXtTHeJIZQbnRSdVJFXADdaDlcxnDyMDQMpblpWyYwVIXrRD8likTCqhPNadbt4zwMDc/6YsrvaIZcAbnRm7YMeQGryJchp4+HZJiGGBpukF1LHMkQzI3aUUUkvfG0jHSGWfShcVbxZL0yjiGUG4XC+mIFRsgfhlz2Vaq/0CkHj2EI5UaRsD7gbvTopju7pDEWqRP8oTOUUPnwDTXJsUzVQShdW+TQh7oydNUPmSG88HxxN+bmDTscL7k1vm7oumYgkSHqI3VqIBS6saH9T1q9mp+hseovjugiMRSIArjjjMe/uZ1xsjHNIEt1KxCQzSSGcOD0CV94LVA6Ravm8jPULXnAhCbHabzwhdc81TfUiKmfoV7vdHVlcwrDGjC7PakMzvASxhxxGqaJQOBURjzD1jRRkOW2xuuAOZLhIQqa0CrVvp8raOIZrvsID7S95ls8oIq4y8SDMAGG2guB5yIZvhajmLkelDfmCIU8SPyCslR7IVCoE8XQ0O+gFwyH1x7Pu2Er20pOYmi0BXFXUQxDO6+moIOYBzy0qtza/iqDtjCcsSEMgbyaZJVr6vysPOHj0goBHIdb3lKfwwGrFCt9gsxVz3bkyprGJaVegS5pgKM1NIbtvGDvB10OTxrHfrwhzCKdIZDMIjH0lz6BftIN1Y52Iy/CTgxofE3gAaUBRMvbD+YyHP2g6VTdPxyRiqMCDDU1BJStDcpbPAEwhKLdD1glEOHsTIChZnwAn+uNDLs8PbzJTJ8qXBwV2Ifa24Aq9bcybP0qeDua+ehgXU3AptFXvasudIbH7AxRv0rq5lAwlBGwaXSV71q6RtLG0AlJDIFDFqBfJY3TjoBHEMNQaGaEm8wy01K6cEhieBZndx7XgLIx1mnIiQpFonRt5S5Tq4rolQpLYtjKFsivAoKqRqohULsfYCj1arm1sx6Eva4WD+GQxrD9u2zmGnJr5xVGcdTBb9iEYt66/zR3JDN3wkz7mRjEEPST3ON1+iQGZE0wb6Evm4XztYAm2n0qLJ1h51fZL3XfYQzLv0yDc6jrCyDpCsVtp4oPYQjkn1wZp4tTfzgjmD80thpkuTlH8fsY6CCGXdjC2I7uLOnD8hunQYZmZAxaEJAArJ9hzjSGVjrY/VldyLvyIYqh1GUNMl4osDSQYftSL0O+9f5xDMNCGWrYldz97wFttN/L0DD2vGZNmKE5idiZI6hE5q0M9WC1VyMSaqKUWSCBBfGQHNrbGGqWG5BweIFUuWfushINMUBH1OrA8Rj5YhLFUK/D9JqmFIbWifsRemYcPGY49XZI1CP2cQy1n/KuE1J9qVV+6ek/BtUjeDKE3HhzFEPdYvbabbQqaGFpA1ii9oC2I5KwtzNncXOoWTXeQ/LESna7AU3taVwJHdmGPFkn+xnHUPNNvUUZRIZOE6HO+MQeBuO8a+t5wBL6U4bAzRjeBHxoO0LWbCRDzSXwHmQjn5lZOQPyHgSFEvDP5yV8DjVO0miuaQZJY4UznvCcbwET8PcyPaz8IIqhXq01XFsUQLziAShQ9MsRTtgzrPlHJEPtLcuhNk3/HDIqMFD0HAXgVx2BeFoKQ/3QrPd8EJGh9NT9+Boj+PyqYQz1tJj3UDCRofI2HvNcIhg8N3J8Sf0YhkY9mvcUG5Eh0rnzCc/pVzBh/8RBpVneRqspr21PZajFvkGZg2f8POe3uuoL+VpuMQx1O9LvoFFXqfZzM3hPohm/Aus8cNePaQx1yec/iJhgl44xfx4/yIzYOP3qSmJoyAV/lpTIUP9kHF93CzDjByvGXzs1jaH+qYZF9R9j1JNM/YZDz7c42xEs9tV8jRSGRmAlcISNyFB3Le4csPMttp8EmWiGv5jAUHL9mwVS+ckM8YL6s+Yngf3ZTNWSwJDr3lmo0XPqKu2BFNQ/E/Bgf7arVYGQMof6+wLJtRRJo+lXrKC+1wMSKupyGyvEMzRLFYJDT9AW+h+Aruyo245ApzXQLohmaDaEDd6ukqLxg+GIO0f3fwXOLtMYWg06gnVfVKtNW4xOus5bUP8CUpEXyVAWxr4Id9ClMvQeofYV1P8CraqMnUNjb8/DdcLUVaoJfSgqwhXu2HY44o0VXpV7BIacm8JrFS5OpEYTdfUODxR1IEb+WMdL9IcZKqvNEaWElurj6w4nchqHQU08+nH4HGTt0wUZMjvgRxk6OdamvRdL9UgBGXLemKNh3QYYuh3OZ5RSdnJEWF+D6FPuQWWswLB/p1XK7mfonnI/ZOo48Bi7rmaxHpCFsx3PvuiG/TU8DCUrHf1KqmOP6fWlT4zv42k9dSaeE1tAhMr8cDpDdQLKPTL3iTKXqVscpeE3MQP4iq/hQ1HGLTqHwMN7altBejczvbxjDhwv0cCL5rye4RsQPqpl+upSAo8kEIxYpbrhNjr7l0jXktvTWggO81j2rrcBXk3vvRjRc89wIpLvosMsvB+r3ToHkl1PxNz1F9MZ0lgliVcoCeTWh4O9ppFGtz0WMT8ewdCMISZdUo55WoDbAafzOvzE3R8Q0/tSGT+0iG7TiR0/B90OhqV0POl1EDGr1LptJbKJP5L4xfq52bURD+yj772M6kFrNlSKa+KPuclruKuCW1/d4Yd0CZGJKIZ2A8wt+Xtitz6gbgd0kPgnocFybB9hW8AdaOJGIuEqj9vh6vvlJe1mq8he0HYecUJo6yzFFmyp4y1XMT/lfLlVqTd3RXcst4cZ7I2PhI2dEiIDeiOA0a0ccltgLEN5skd670SGDhXbgN6e14acIXpJGKLnULm3pS1PCEfOkLuPA710TRt44HVN8X31oZLu3Uo420QqMUOar3j8/h7GLqT2C8aQcDcCnFZbLkrF1P22H6WYqJolEkOdBmWGoe1DmZcQyoT7nuwD1U/U3YVNTbM4TCdohHjiSfc/YDbbHHrPfJlyZ5cT1SPD5/c/324oT2rbbhRl0r1rqky7WAzO81vvNj9fAicTZdrdeZwnXH7naTqvvdlUR7fBF92WqfcfikCHKwe+epsXLNOXfskDirKg9QRzEXeH4RFvjmG81IrORNy2gqEccA8pMW/YwdN4xnijJcKuw6ewZTjgLlkuVkSOc9LNOXYMIMc1ty3DQfcBc9RuseHp5vWAci7pyXIlestw2OV5re25CJRm3vHjv9WXu4mr+LsOIbQM6dfuYINjcnt1A0eOytxhFnrfGctJPt5yrNGeYY671aVixWkxXe7qel/vltd1cyqUS3rXQI6sZHzh+sjTPJfadwxDZVNESPm84F61HmuX2YBywsutFL8hf9laDqqz0YHnchHsGObZ0CDA6MVovzlcqqoqeFHNbhs4LnrORbBnSGzPlwDpVSYe2/aWjWDPMMPd4xgE8Yp4C+nXXrnoGA6333GEDiNA2BPuhaajZzhYX3jg3LEZRDYZc0fPMNhxbAgkVOXtmcDYmxFD6BkONGtCiPBCApd2peDOMCanmgLo5mKI34HiI0fizvCdsqaHZGVQqu4blp/fk2Gw0nYwJCtuHu0435xSExMBPBgOcqGo4GK8AMOM9XTGIjO7dPwyHBy0o4EzVm3Xy93P/TLAeT25Lk6cJV1MSsQvwzcapzZkFxLvkkmcidZKHxrxDeHJMOYS4Sx4M7EnngztO2T+N3gx9Hdb+l68GGYJ3X0gNIZDU5EfCp3h2y2bP4HBkHyL8DfBYPh2C/wvYDJMKMf7eFgMSV3Ovws2w7hyvG+AwzBTtuBz4DKMqDj8CgAM48qoPx4Qw9H1/0QRZDja/TPf5v2AGeaNq/8tMIajafbA5R8BZTg65g4+/xFwht7TrV8EH8OuUvn7OfoZjuaLr+cYYNhyPHvruD8fQYYtdulHAT4AFIZdVqEj+Z0saQw71OdLJZhS+I1anwk6ww7H3Wa9WJ3Kf5cCGI7yP5WM0CefOInHAAAAAElFTkSuQmCC";
+  static string _myImage = "https://randomuser.me/api/portraits/women/44.jpg";
+  List<Message> _messages = new List<Message>()
+  {
+    new Message(false, _aiImage, "Скажите чего желаете и я помогу вам выбрать и купить подходящий товар."),
+    new Message(true, _myImage, "Хочу создать наручные часы самостоятельно, но не знаю какакой выбрать корпус, ремешок, экран, микроконтроллер, батарею"),
+    new Message(false, _aiImage, "создание наручных часов своими руками - это интересный и сложный проект, который требует знаний в разных областях. вот несколько рекомендаций, которые могут помочь вам в этом процессе: <br><br>  корпус: выбор корпуса во многом зависит от того, какой вид вы хотите дать своим часам. вы можете использовать готовый корпус от старых часов или создать собственный из пластика, металла или даже дерева. также можно рассмотреть варианты с 3d-печатью. <br><br>  ремешок: ремешок можно выбрать на основе личных предпочтений и удобства. варианты могут включать кожу, ткань, резину или металлические браслеты. <br><br>  экран: для diy-часов часто используются oled-дисплеи, например, размером 128x64 1.3\" (sh1106). они обеспечивают хорошую видимость и низкое энергопотребление. <br><br>  микроконтроллер: в качестве микроконтроллера можно использовать, например, atmega328p в корпусе qfp32 или atmega8. это популярные и доступные варианты, которые хорошо поддерживаются и легко программировать. <br><br>  батарея: выбор батареи зависит от энергопотребления ваших часов и размера корпуса. возможно, вам придется сделать компромисс между размером батареи и продолжительностью ее работы. <br><br>  не забудьте о необходимости наличия часового кварца или модуля для отслеживания точного времени, например, ds1337 в корпусе sop-8. <br><br>  это лишь общие рекомендации, и конечный выбор будет зависеть от ваших личных предпочтений и технических возможностей. удачи вам в этом интересном проекте!"),
+    new Message(true, _myImage, "Посоветуй контроллер размером поменьше"),
+    new Message(true, _myImage, "А ещё какой цвет лучше выбрать?"),
+    new Message(false, _aiImage, "если вам нужен компактный микроконтроллер, то можно рассмотреть arduino nano или micro, они достаточно мощные и имеют маленький размер. если же вам нужно что-то ещё более компактное, можно рассмотреть attiny85, но учтите, что у него будет меньше функциональности из-за меньшего количества выводов.<br><br>  вопрос о выборе цвета уже более субъективен и зависит от ваших личных предпочтений. если вы хотите, чтобы цвет был менее заметен или оставался актуальным длительное время, чёрный или серый цвета могут быть хорошим выбором. если же вам нравится что-то более яркое и весёлое, то можно выбрать красный, синий или зелёный цвет. однако, стоит помнить, что цвет не должен мешать чтению информации с экрана.")
+  };
+
+  private async Task AutoResize()
+  {
+    await JSRuntime.InvokeVoidAsync("autoResize", _textarea);
+  }
+  
+  private async Task CheckForEnter(KeyboardEventArgs e)
+  {
+    if (e.Key == "Enter")
+    {
+      await Send();
+    }
+  }
+
+  private async Task Send()
+  {
+    var temp = TextAreaValue.Trim();
+    TextAreaValue = string.Empty;
+    temp = temp.Replace("\n", "<br>");
+    _messages.Add(new Message(true, _myImage, temp));
+    await Task.Delay(15);
+    await JSRuntime.InvokeVoidAsync("autoResize", _textarea);
+    StateHasChanged();
+  }
+
+  private class Message
+  {
+    public bool IsMyMessage { get; set; }
+    public string Image { get; set; }
+    public string Text { get; set; }
+
+    public Message(bool isMyMessage, string image, string text)
+    {
+      IsMyMessage = isMyMessage;
+      Image = image;
+      Text = text;
+    }
+  }
+}
