@@ -116,7 +116,9 @@ header {
     color: #000000;
     margin-left: 3%;
 }
-
+.text:hover {
+    cursor: pointer;
+}
 .right-buttons{
     position: relative;
     right: -7%;
@@ -133,6 +135,9 @@ header {
     align-items: center;
     width: 12vw;
     height: 60px;
+}
+.login:hover {
+    cursor: pointer;
 }
 
 .login svg {
@@ -167,7 +172,7 @@ main {
     position: fixed;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 85%;
     width: 100%;
     bottom: 0;
     padding: 30px;
@@ -180,7 +185,7 @@ main {
     z-index: 0;
     height: 80%;
 }
-.chats {
+.content {
     display: flex;
     width: 1000px;
     z-index: 5;
@@ -215,6 +220,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 624px;
+    min-width: 564px;
     z-index: 10;
     height: 100%;
     border-radius: 25px;
@@ -306,10 +312,17 @@ main {
     width: 100%;
     height: 100%;
 }
+.chat-name-icon:hover .chat-icon{
+    border: 3px solid #C0C0C0;
+    cursor: pointer;
+}
+
+.chat-selected{
+    border: 3px solid #B9B9FF;
+}
 
 .messages {
     position: relative;
-    flex-grow: 1;
     overflow: auto;
     width: 95%;
     margin: 2.5% auto;
@@ -418,14 +431,237 @@ main {
 }
 
 .send-button {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background: none;
     border: none;
     cursor: pointer;
     margin: 5px 10px 5px 0;
+    border-radius: 100%
 }
 .send-button svg{
+    width: 80%;
+    height: 80%;
+}
+.send-button svg:hover {
+    fill: #89C5B9;
+    cursor: pointer;
+}
+.cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    z-index: 10;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #FEFEFE;
+    padding: 7px;
+    box-shadow: 0 0 30px rgba(192, 192, 192, 0.17);
+}
+.card-type-selector {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 85%;
+    height: 65px;
+}
+.card-grid {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+}
+.card-page {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80%;
+    height: 60px;
+    bottom: 0;
+}
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px outset #C0C0C0C0;
+    width: 47%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+.card-button:hover {
+    background-color: #EEEEEE;
+    border: 1px outset #A0A0A080;
+    cursor: pointer;
+}
+.type-selected {
+    color: #FFFFFF;
+    background-color: #89C5B9;
+    border: 0px outset #C0C0C0C0;
+}
+.type-selected:hover {
+    background-color: #89C5B9;
+    border: 0px outset #C0C0C0C0;
+    cursor: default;
+}
+
+.page-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    border-radius: 10px;
+    width: 40px;
+    height: 30px;
+    background-color: #F3F3ED;
+    margin: 4px;
+    color: #000000;
+}
+.page-button:hover {
+    border: 1px outset #A0A0A0;
+    cursor: pointer;
+}
+.arrow {
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.arrow:hover {
+    background-color: #C0C0C060;
+    cursor: pointer;
+}
+.arrow svg {
     width: 100%;
     height: 100%;
+}
+.page-selected {
+    color: #FEFEFE;
+    background-color: #212121;
+}
+.disabled {
+    visibility: hidden;
+}
+.card-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 2px;
+    height: 100%
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 125px;
+    height: 180px;
+    background-color: #FFFFFF;
+    margin: 5px;
+    border-radius: 15px;
+    border: 1px outset #C0C0C0C0;
+}
+.card-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 47%;
+}
+.card-img img {
+    width: 100%;
+    height: auto;
+}
+.card-text {
+    margin: 4px 5px 5px;
+    width: auto;
+    height: auto;
+    color: #000000;
+}
+.product-price {
+    display:flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+.product-name {
+    display:flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 16px;
+}
+.product-rating {
+    display:flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+}
+.product-rating svg {
+    margin-bottom: 1px;
+}
+.product-rating-total {
+    margin: 0 1px;
+}
+.product-rating-count {
+    font-size: 10px;
+    color: #696868;
+}
+.card-line {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background: #C0C0C0;
+}
+.buy-button {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 103px;
+    margin: auto;
+    border-radius: 7px;
+    border: 1px outset #C0C0C0C0;
+    background-color: #EAF1EC;
+}
+.buy-button:hover {
+    background-color: #CAD1CC;
+    border: 1px outset #A0A0A0;
+    cursor: pointer;
+}
+.card-cart {
+    margin: 0 3px 2px;
+    height: 13px;
+    width: 13px;
+}
+.card-cart svg{
+    height: 100%;
+    width: 100%;
+}
+.buy-text{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 7px;
+    color: #000000;
 }
